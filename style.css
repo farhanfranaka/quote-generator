@@ -89,7 +89,8 @@ nav ul li a:hover + nav ul li
     align-items: center;
     flex-direction: column;
 }
-.bg .hero .kolom-hero .top #quote{
+.bg .hero .kolom-hero .top #quote
+{
     text-align: center;
     width: 80%;
     font-family: 'Oleo Script', cursive;
@@ -121,12 +122,12 @@ nav ul li a:hover + nav ul li
 {
     width: 30%;
     height: 40%;
-    background: pink;
-    border-radius: 5px;
+    background: rgba(247, 247, 247, 0.2);
     border: none;
+    border-radius: 5px;
     font-size: larger;
     font-style: italic;
-    color: #2c3e50;
+    color: #f7f7f7;
     transition: 0.25s;
 }
 
@@ -135,6 +136,32 @@ nav ul li a:hover + nav ul li
     color: #f0f0f0;
     background-color: #333;
 }
+
+@media screen and (max-width: 680px) {
+    .bg .hero .kolom-hero
+    {
+        height: 45vh;
+    }
+    .bg .hero .kolom-hero .top #quote
+    {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+    .bg .hero .kolom-hero .top .author
+    {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .bg .hero .kolom-hero .bot button
+    {
+        width: 30%;
+        height: 30%;
+        font-size: small;
+        color: #f7f7f7;
+        transition: 0.25s;
+    }
+}
+
 
 /* .thr
 {
