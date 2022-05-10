@@ -7,7 +7,6 @@
     <title>Quote Generator</title>
     
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <script type="text/javascript"></script>
     <script type="module"></script>
@@ -26,11 +25,11 @@
         <div class="hero">
             <div class="kolom-hero">
                 <div class="top">
-                    <p id="quote">Halo, untuk mendapatkan quotes bisa click tombol Shuffle</p>
+                    <p id="quote">Halo, untuk mendapatkan quotes bisa click tombol Random</p>
                     <p id="author" class="author">Hans.</p>
                 </div>
                 <div class="bot">
-                    <button id="buttonShuffle">Shuffle</button>
+                    <button id="buttonShuffle">Random</button>
                 </div>
             </div>
         </div>
@@ -102,7 +101,7 @@
         .then(function(data) {
             const randomIndex = Math.floor(Math.random() * 1644);
             quote.innerHTML = data[randomIndex].text
-            author.innerHTML = `"${data[randomIndex].author}"`
+            author.innerHTML = `" ${data[randomIndex].author} "`
         });
     }
     

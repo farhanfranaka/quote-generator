@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Comfortaa';
+    src: url(Comfortaa/static/Comfortaa-Regular.ttf);
+}
 *
 {
     margin: 0;
@@ -39,6 +43,7 @@ nav ul li a:hover + nav ul li
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
     object-fit: cover;
 
 }
@@ -93,17 +98,17 @@ nav ul li a:hover + nav ul li
 {
     text-align: center;
     width: 80%;
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Comfortaa';
     color: #f7f7f7;
     font-style: italic;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .bg .hero .kolom-hero .top .author
 {
     text-align: center;
     width: 40%;
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Comfortaa';
     color: #f7f7f7;
     font-style: italic;
     font-size: 14px;
