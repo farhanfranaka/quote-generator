@@ -38,13 +38,12 @@ nav ul li a:hover + nav ul li
 {
     width: 100%;
     height: 100vh;
-    background: url(./img/img1.jpg);
+    background-image: url(./img/img1.jpg);
     /* background: url(https://source.unsplash.com/random/1920×1080/?mountain); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    object-fit: cover;
 
 }
 
