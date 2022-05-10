@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <script type="text/javascript"></script>
+    <script type="module"></script>
+
+
+</head>
+<body>
+    <!-- <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Sesuatu</a></li>
+        </ul>
+    </nav> -->
+    <div class="bg" id="bg">
+        <canvas id="canvas" class="canvas"></canvas>
+        <div class="hero">
+            <div class="kolom-hero">
+                <div class="top">
+                    <p id="quote">Halo, untuk mendapatkan quotes bisa click tombol Shuffle</p>
+                    <p id="author" class="author">Hans.</p>
+                </div>
+                <div class="bot">
+                    <button id="buttonShuffle">Shuffle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="thr">
+        <div class="isi">
+            <div class="content">
+                <div class="kolom">
+                    <div class="atas">
+                        <img src="./img/qrcode.jpeg" alt="">
+                    </div>
+                    <div class="tengah">
+                        <h2>THR</h2>
+                    </div>
+                    <div class="bawah">
+                        <p>Mana tau, temen-temen ingin berbagi THR. 
+                            Bisa nih, bagi-bagi melalui QR Code E-Wallet Gopay saya a/n Farhan Franaka. Terima kasih</p>
+                    </div>
+                </div>
+                <div class="kolom2">
+                    <form>
+                        <ul class="form-style-1">
+                            <li>
+                                <label>Namanya siapa nihhh </label>
+                                <input type="text" name="field1" class="field-divided" placeholder="" /> </li>
+                            <li>
+                                <label>Kasih ucapan gituu</label>
+                                <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+                            </li>
+                            <li>
+                                <input type="submit" value="Submit" />
+                            </li>
+                        </ul>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script src="https://unpkg.com/starback@2.0.1/dist/starback.js"></script>
+    <script src="PATH_TO_DIST_FOLDER/starback.js"></script>
+    <script src="https://data.jsdelivr.com/v1/package/npm/google-translate-api-extended/badge)](https://www.jsdelivr.com/package/npm/google-translate-api-extended"></script>
+
+
+    <script>
+      const canvas = document.getElementById('canvas')
+      const starback = new Starback(canvas, {
+          type: 'dot',
+          quantity: 100,
+          direction: 225,
+          backgroundColor: "transparent",
+          randomOpacity: true,
+          starColor: "#ff69b4",
+      })
+
+    
+    
+
+
+    const quote = document.getElementById('quote')
+    const buttonShuffle  = document.getElementById("buttonShuffle")
+    const author = document.getElementById("author")
+    const bg = document.getElementById("bg")
+
+    function fetchQuote() {
+        fetch("https://type.fit/api/quotes")
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            const randomIndex = Math.floor(Math.random() * 1644);
+            quote.innerHTML = data[randomIndex].text
+            author.innerHTML = `"${data[randomIndex].author}"`
+        });
+    }
+    
+    const wallpaper = ["url(https://source.unsplash.com/random/1920×1080/?mountain)",
+                        "url(https://source.unsplash.com/random/1920×1080/?forest)",
+                        "url(https://source.unsplash.com/random/1920×1080/?aesthetic)",
+                        "url(https://source.unsplash.com/random/1920×1080/?sky)",
+                        "url(https://source.unsplash.com/random/1920×1080/?mountain)",
+                        "url(https://source.unsplash.com/random/1920×1080/?forest)",
+                        "url(https://source.unsplash.com/random/1920×1080/?aesthetic)",
+                        "url(https://source.unsplash.com/random/1920×1080/?sky)",
+                        "url(https://source.unsplash.com/random/1920×1080/?mountain)",
+                        "url(https://source.unsplash.com/random/1920×1080/?forest)",
+                        "url(https://source.unsplash.com/random/1920×1080/?aesthetic)",
+                        "url(https://source.unsplash.com/random/1920×1080/?sky)",
+                        "url(https://source.unsplash.com/random/1920×1080/?mountain)",
+                        "url(https://source.unsplash.com/random/1920×1080/?forest)",
+                        "url(https://source.unsplash.com/random/1920×1080/?aesthetic)",
+                        "url(https://source.unsplash.com/random/1920×1080/?sky)",
+                        "url(https://source.unsplash.com/random/1920×1080/?mountain)",
+                        "url(https://source.unsplash.com/random/1920×1080/?forest)",
+                        "url(https://source.unsplash.com/random/1920×1080/?aesthetic)",
+                        "url(https://source.unsplash.com/random/1920×1080/?sky)",
+                        "url(https://source.unsplash.com/random/1920×1080/?mountain)",
+                        "url(https://source.unsplash.com/random/1920×1080/?forest)",
+                        "url(https://source.unsplash.com/random/1920×1080/?aesthetic)",
+                        "url(https://source.unsplash.com/random/1920×1080/?sky)",
+                        "url(https://source.unsplash.com/random/1920×1080/?mountain)",
+                        "url(https://source.unsplash.com/random/1920×1080/?forest)",
+                        "url(https://source.unsplash.com/random/1920×1080/?aesthetic)",
+                        "url(https://source.unsplash.com/random/1920×1080/?sky)",
+                        "url(https://source.unsplash.com/random/1920×1080/?mountain)",
+                        "url(https://source.unsplash.com/random/1920×1080/?forest)",
+                        "url(https://source.unsplash.com/random/1920×1080/?aesthetic)",
+                        "url(https://source.unsplash.com/random/1920×1080/?sky)"]
+
+    buttonShuffle.addEventListener("click", () => 
+    {
+        const randomNumber = Math.floor(Math.random() * 32);
+        fetchQuote()
+        bg.style.background = wallpaper[randomNumber]
+        bg.style.backgroundRepeat = "no-repeat"
+        bg.style.backgroundSize = "cover"
+    })
+
+    </script>
+</body>
+</html>
